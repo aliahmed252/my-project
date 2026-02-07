@@ -21,11 +21,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
+      supplied: distribution
+
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
-        supplied: distribution
-        
+        java-version: '17'        
     - name: Grant excute permission for gradlew
       run:  chmod +x gradlew
     - name: Build with Gradle Wrapper
